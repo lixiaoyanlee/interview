@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>双飞翼布局</title>
+    <style>
+        html * {
+            padding: 0;
+            margin: 0;
+        }
+        #bd>div {
+            float: left;
+            height: 100px;
+        }
+
+        #center {            
+            width: 100%;
+        }
+        /*给inside的div添加margin，把内容放到中间栏，其实整个背景还是100%*/
+        #inside{
+            background: green;
+            margin:0 200px;
+            height: 100px;
+        }
+        #left {
+            background: red;
+            width: 200px;
+            margin-left: -100%;
+        }
+
+        #right {
+            background: yellow;
+            width: 200px;
+            margin-left: -200px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <article id="bd">
+            <div id="center">
+                <div id="inside">中间部分</div>
+            </div>
+            <div id="left">左侧部分</div>
+            <div id="right">右侧部分</div>
+        </article>
+    </section>
+
+</body>
+
+</html>

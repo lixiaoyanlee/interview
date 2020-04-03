@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三栏布局</title>
+    <style>
+        html * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+        }
+
+        .layout {
+            margin-top: 20px;
+        }
+
+        /* .layout article div {
+            height: 100px;
+        } */
+
+        .layout .left,
+        .layout .right {
+            width: 300px;
+        }
+
+        .layout .left {
+            background: red;
+        }
+
+        .layout .center {
+            background: green;
+        }
+
+        .layout .right {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 浮动布局解决方案 开始-->
+    <section class="layout float">
+        <style>
+            .layout.float .left {
+                float: left;
+            }
+
+            .layout.float .right {
+                float: right;
+            }
+        </style>
+        <article class="left-center-right">
+            <div class="left">左边部分</div>
+            <div class="right">右边部分</div>
+            <div class="center">中间部分中间部分中间部分中间部分中间部分中间部分</div>
+        </article>
+    </section> 
+    <!-- 浮动布局解决方案 结束-->
+
+    <!-- 绝对定位解决方案 开始-->
+    <section class="layout absolute">
+        <style>
+            .layout.absolute .left-center-right>div {
+                position: absolute;
+            }
+
+            .layout.absolute .left {
+                left: 0;
+            }
+
+            .layout.absolute .center {
+                left: 300px;
+                right:300px;
+            }
+
+            .layout.absolute .right {
+                right: 0;
+            }
+        </style>
+        <article class="left-center-right">
+            <div class="left">左边部分</div>
+            <div class="center">
+                绝对定位解决方案<br>
+                中间部分中间部分<br>
+                中间部分中间部分<br>
+                中间部分中间部分<br>
+            </div>
+            <div class="right">右边部分</div>
+        </article>
+    </section> 
+    <!-- 绝对定位局部解决方案 结束-->
+    <!-- flexbox解决方案 开始-->
+    <section class="layout flexbox">
+        <style>
+            .layout.flexbox .left-center-right {
+                display: flex;
+            }
+
+            .layout.flexbox .center {
+                flex: 1
+            }
+        </style>
+        <article class="left-center-right">
+            <div class="left">左边部分</div>
+            <div class="center">
+                flexbox解决方案<br>
+            中间部分中间部分<br>
+            中间部分中间部分<br>
+            中间部分中间部分<br></div>
+            <div class="right">右边部分</div>
+        </article>
+    </section>
+    <!-- flexbox解决方案 结束-->
+
+    <!-- 表格布局解决方案 开始-->
+    <section class="layout table">
+        <style>
+            .layout.table .left-center-right {
+                display: table;
+                width:100%
+            }
+
+            .layout.table .left-center-right>div {
+                display: table-cell;
+            }
+        </style>
+        <article class="left-center-right">
+            <div class="left">左边部分</div>
+            <div class="center">
+                table布局<br>
+                中间部分中间部分<br>
+                中间部分中间部分<br>
+                中间部分中间部分<br>
+            </div>
+            <div class="right">右边部分</div>
+        </article>
+    </section>
+    <!-- 表格布局解决方案 结束-->
+    <!-- 网格布局解决方案 开始-->
+    <section class="layout grid">
+        <style>
+            .layout.grid .left-center-right {
+                display: grid;
+                width: 100%;
+                grid-template-columns: 300px auto 300px;
+            }
+
+        </style>
+        <article class="left-center-right">
+            <div class="left">左边部分</div>
+            <div class="center">
+                网格布局<br>
+                中间部分中间部分<br>
+                中间部分中间部分<br>
+                中间部分中间部分<br>
+            </div>
+            <div class="right">右边部分</div>
+        </article>
+    </section>
+    <!-- 网格布局解决方案 结束-->
+
+    <!-- calc解决方案 开始-->
+    <section class="layout calc">
+        <style>
+            .layout.calc .left-center-right {
+                width: 100%;
+            }
+            .layout.calc .left-center-right>div{
+               float:left;
+            }
+            .layout.calc .center {
+                width: calc(100% - 600px);
+            }
+        </style>
+        <article class="left-center-right">
+            <div class="left">左边部分</div>
+            <div class="center">中间部分</div>
+            <div class="right">右边部分</div>
+        </article>
+    </section>
+    <!-- calc解决方案 结束-->
+</body>
+
+</html>
