@@ -9,3 +9,4 @@
 可查看node文件夹下：
 - 1、关于package.json的详解：查看package文件夹下代码及note.md说明: https://github.com/lixiaoyanlee/interview/tree/master/node/package
     
+-2、深入理解HTTP协议，巩固HTTP知识体系：https://github.com/lixiaoyanlee/interview/tree/master/node/http
