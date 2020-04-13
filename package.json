@@ -1,6 +1,6 @@
 {
   "name": "interview",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "关于前端面试问题详解，包括JavaScript、HTML、css、流行框架（vue、react、angular）、前端性能、前端监控等问题",
   "main": "index.js",
   "scripts": {
