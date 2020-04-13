@@ -7,5 +7,5 @@
 
 ## node 面试问题
 可查看node文件夹下：
-- 1、关于package.json的详解：查看package文件夹下代码及note.md说明
+- 1、关于package.json的详解：查看package文件夹下代码及note.md说明: https://github.com/lixiaoyanlee/interview/tree/master/node/package
     
